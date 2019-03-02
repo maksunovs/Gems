@@ -1,0 +1,118 @@
+2019-02-27 18:36:55 INFO  SAXValidator:29 - src/test/java/gems.xml is valid
+2019-02-27 22:49:36 ERROR JAXBParser:36 - javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+2019-02-27 22:55:08 ERROR JAXBParser:35 - javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+2019-02-27 22:55:16 ERROR JAXBParser:35 - javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+2019-02-27 22:58:32 ERROR JAXBParser:37 - java.io.FileNotFoundException: \src\test\java\gems.xml (Системе не удается найти указанный путь)
+2019-02-27 22:58:53 ERROR JAXBParser:35 - javax.xml.bind.UnmarshalException: unexpected element (uri:"http://www.example.com/gems", local:"gems"). Expected elements are (none)
+2019-02-27 22:59:17 ERROR JAXBParser:35 - javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+2019-02-27 23:00:00 ERROR JAXBParser:35 - javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+2019-02-27 23:01:41 ERROR JAXBParser:35 - javax.xml.bind.UnmarshalException: unexpected element (uri:"http://www.example.com/gems", local:"gems"). Expected elements are (none)
+2019-02-27 23:05:22 ERROR JAXBParser:37 - java.io.FileNotFoundException: \src\test\java\gems.xml (Системе не удается найти указанный путь)
+2019-02-27 23:05:34 ERROR JAXBParser:35 - javax.xml.bind.UnmarshalException: unexpected element (uri:"http://www.example.com/gems", local:"gems"). Expected elements are (none)
+2019-02-27 23:08:04 ERROR JAXBParser:35 - javax.xml.bind.UnmarshalException: unexpected element (uri:"http://www.example.com/gems", local:"gems"). Expected elements are (none)
+2019-02-27 23:20:25 ERROR JAXBParser:36 - javax.xml.bind.UnmarshalException: unexpected element (uri:"http://www.example.com/gems", local:"gems"). Expected elements are (none)
+2019-02-27 23:23:18 ERROR JAXBParser:36 - javax.xml.bind.UnmarshalException: unexpected element (uri:"http://www.example.com/gems", local:"gems"). Expected elements are <{}gems>
+2019-02-27 23:23:50 ERROR JAXBParser:36 - javax.xml.bind.UnmarshalException: unexpected element (uri:"http://www.example.com/gems", local:"gems"). Expected elements are <{}gems>
+2019-02-27 23:31:47 ERROR JAXBParser:36 - javax.xml.bind.UnmarshalException: unexpected element (uri:"http://www.example.com/gems", local:"gems"). Expected elements are <{}gems>
+2019-02-27 23:32:04 ERROR JAXBParser:36 - javax.xml.bind.UnmarshalException: unexpected element (uri:"http://www.example.com/gems", local:"gems"). Expected elements are (none)
+2019-02-27 23:33:02 ERROR JAXBParser:36 - com.sun.xml.internal.bind.v2.runtime.IllegalAnnotationsException: 1 counts of IllegalAnnotationExceptions
+com.epam.gems.entity.Gem does not have a no-arg default constructor.
+	this problem is related to the following location:
+		at com.epam.gems.entity.Gem
+		at private final java.util.List com.epam.gems.entity.Gems.list
+		at com.epam.gems.entity.Gems
+
+2019-02-27 23:34:25 ERROR JAXBParser:36 - javax.xml.bind.UnmarshalException: unexpected element (uri:"http://www.example.com/gems", local:"gems"). Expected elements are <{}gem>,<{}gems>
+2019-02-27 23:35:03 ERROR JAXBParser:36 - javax.xml.bind.UnmarshalException: unexpected element (uri:"http://www.example.com/gems", local:"gems"). Expected elements are <{}gem>,<{}gems>
+2019-02-27 23:35:34 ERROR JAXBParser:36 - javax.xml.bind.UnmarshalException: unexpected element (uri:"http://www.example.com/gems", local:"gems"). Expected elements are <{}gem>,<{}gems>
+2019-02-28 11:39:54 ERROR JAXBParser:36 - com.sun.xml.internal.bind.v2.runtime.IllegalAnnotationsException: 1 counts of IllegalAnnotationExceptions
+Two classes have the same XML type name "gems". Use @XmlType.name and @XmlType.namespace to     assign different names to them.
+	this problem is related to the following location:
+		at com.epam.gems.entity.Gem
+		at private final java.util.List com.epam.gems.entity.Gems.list
+		at com.epam.gems.entity.Gems
+	this problem is related to the following location:
+		at com.epam.gems.entity.Gems
+
+2019-02-28 11:41:07 ERROR JAXBParser:36 - javax.xml.bind.UnmarshalException: unexpected element (uri:"http://www.example.com/gems", local:"gems"). Expected elements are (none)
+2019-02-28 11:49:14 ERROR JAXBParser:36 - javax.xml.bind.UnmarshalException: unexpected element (uri:"http://www.example.com/gems", local:"gems"). Expected elements are <{}gems>
+2019-02-28 11:55:35 ERROR JAXBParser:36 - javax.xml.bind.UnmarshalException: unexpected element (uri:"http://www.example.com/gems", local:"gems"). Expected elements are <{}gems>
+2019-02-28 12:00:18 ERROR JAXBParser:36 - javax.xml.bind.UnmarshalException: unexpected element (uri:"http://www.example.com/gems", local:"gems"). Expected elements are <{}gems>
+2019-02-28 12:06:55 ERROR JAXBParser:36 - javax.xml.bind.UnmarshalException: unexpected element (uri:"http://www.example.com/gems", local:"gems"). Expected elements are <{}gems>
+2019-02-28 12:07:04 ERROR JAXBParser:36 - javax.xml.bind.UnmarshalException: unexpected element (uri:"http://www.example.com/gems", local:"gems"). Expected elements are <{}gems>
+2019-02-28 12:08:41 ERROR JAXBParser:37 - javax.xml.bind.UnmarshalException: unexpected element (uri:"http://www.example.com/gems", local:"gems"). Expected elements are <{}gems>
+2019-02-28 12:10:29 ERROR JAXBParser:37 - javax.xml.bind.UnmarshalException: unexpected element (uri:"http://www.example.com/gems", local:"gems"). Expected elements are <{}gems>
+2019-02-28 12:15:12 ERROR JAXBParser:37 - javax.xml.bind.UnmarshalException: unexpected element (uri:"http://www.example.com/gems", local:"gems"). Expected elements are <{}gems>
+2019-02-28 12:16:39 ERROR JAXBParser:37 - javax.xml.bind.UnmarshalException: unexpected element (uri:"http://www.example.com/gems", local:"gems"). Expected elements are <{}gems>
+2019-02-28 12:20:47 ERROR JAXBParser:36 - javax.xml.bind.UnmarshalException: unexpected element (uri:"http://www.example.com/gems", local:"gems"). Expected elements are <{}gems>
+2019-02-28 12:20:59 ERROR JAXBParser:36 - javax.xml.bind.UnmarshalException: unexpected element (uri:"http://www.example.com/gems", local:"gems"). Expected elements are <{}gems>
+2019-02-28 12:24:50 ERROR JAXBParser:36 - javax.xml.bind.UnmarshalException: Unable to create an instance of com.epam.gems.entity.Gem
+ - with linked exception:
+[java.lang.InstantiationException]
+2019-02-28 12:25:13 ERROR JAXBParser:36 - javax.xml.bind.UnmarshalException: unexpected element (uri:"http://www.example.com/gems", local:"gems"). Expected elements are <{}gems>
+2019-02-28 12:26:25 ERROR JAXBParser:36 - javax.xml.bind.UnmarshalException: unexpected element (uri:"http://www.example.com/gems", local:"gems"). Expected elements are <{}>,<{}gems>
+2019-02-28 12:27:33 ERROR JAXBParser:36 - javax.xml.bind.UnmarshalException: unexpected element (uri:"http://www.example.com/gems", local:"gems"). Expected elements are <{}gems>
+2019-02-28 12:31:14 ERROR JAXBParser:36 - javax.xml.bind.UnmarshalException: unexpected element (uri:"http://www.example.com/gems", local:"gems"). Expected elements are <{}gems>
+2019-02-28 12:37:01 ERROR JAXBParser:36 - javax.xml.bind.UnmarshalException: unexpected element (uri:"http://www.example.com/gems", local:"gems"). Expected elements are <{}gems>
+2019-02-28 12:39:32 ERROR JAXBParser:36 - javax.xml.bind.UnmarshalException: unexpected element (uri:"http://www.example.com/gems", local:"gems"). Expected elements are <{}gems>
+2019-02-28 12:43:48 ERROR JAXBParser:36 - com.sun.xml.internal.bind.v2.runtime.IllegalAnnotationsException: 1 counts of IllegalAnnotationExceptions
+Invalid @XmlElementRef : Type "class com.epam.gems.entity.Gem" or any of its subclasses are not known to this context.
+	this problem is related to the following location:
+		at private final java.util.List com.epam.gems.entity.Gems.list
+		at com.epam.gems.entity.Gems
+
+2019-02-28 12:44:16 ERROR JAXBParser:36 - javax.xml.bind.UnmarshalException: unexpected element (uri:"http://www.example.com/gems", local:"gems"). Expected elements are <{}gems>
+2019-02-28 12:45:29 ERROR JAXBParser:36 - javax.xml.bind.UnmarshalException: unexpected element (uri:"http://www.example.com/gems", local:"gem"). Expected elements are <{}gems>
+2019-02-28 12:47:37 ERROR JAXBParser:36 - javax.xml.bind.UnmarshalException: unexpected element (uri:"http://www.example.com/gems", local:"gems"). Expected elements are <{}gems>
+2019-02-28 12:49:16 ERROR JAXBParser:36 - javax.xml.bind.UnmarshalException: unexpected element (uri:"http://www.example.com/gems", local:"gems"). Expected elements are (none)
+2019-02-28 12:59:08 ERROR JAXBParser:28 - com.sun.xml.internal.bind.v2.runtime.IllegalAnnotationsException: 1 counts of IllegalAnnotationExceptions
+There's no ObjectFactory with an @XmlElementDecl for the element {http://www.example.com/gems}gem.
+	this problem is related to the following location:
+		at protected java.util.List com.epam.gems.entity.Gems.list
+		at com.epam.gems.entity.Gems
+
+2019-02-28 13:01:42 ERROR JAXBParser:28 - com.sun.xml.internal.bind.v2.runtime.IllegalAnnotationsException: 1 counts of IllegalAnnotationExceptions
+There's no ObjectFactory with an @XmlElementDecl for the element {http://www.example.com/gems}gem.
+	this problem is related to the following location:
+		at protected java.util.List com.epam.gems.entity.Gems.list
+		at com.epam.gems.entity.Gems
+
+2019-02-28 13:03:19 ERROR JAXBParser:28 - javax.xml.bind.UnmarshalException: unexpected element (uri:"http://www.example.com/gems", local:"gems"). Expected elements are <{}gems>
+2019-02-28 22:57:31 ERROR JAXBParser:28 - com.sun.xml.internal.bind.v2.runtime.IllegalAnnotationsException: 2 counts of IllegalAnnotationExceptions
+There are two properties named "list"
+	this problem is related to the following location:
+		at public java.util.List com.epam.gems.entity.Gems.getList()
+		at com.epam.gems.entity.Gems
+	this problem is related to the following location:
+		at public java.util.List com.epam.gems.entity.Gems.list
+		at com.epam.gems.entity.Gems
+Class has two properties of the same name "list"
+	this problem is related to the following location:
+		at public java.util.List com.epam.gems.entity.Gems.getList()
+		at com.epam.gems.entity.Gems
+	this problem is related to the following location:
+		at public java.util.List com.epam.gems.entity.Gems.list
+		at com.epam.gems.entity.Gems
+
+2019-03-02 16:11:06 ERROR JAXBParser:27 - com.sun.xml.internal.bind.v2.runtime.IllegalAnnotationsException: 1 counts of IllegalAnnotationExceptions
+Invalid @XmlElementRef : Type "class com.epam.gems.entity.VisualParameters" or any of its subclasses are not known to this context.
+	this problem is related to the following location:
+		at public java.util.List com.epam.gems.entity.Gems.list
+		at com.epam.gems.entity.Gems
+
+2019-03-02 16:22:01 ERROR JAXBParser:27 - com.sun.xml.internal.bind.v2.runtime.IllegalAnnotationsException: 1 counts of IllegalAnnotationExceptions
+Invalid @XmlElementRef : Type "class com.epam.gems.entity.VisualParameters" or any of its subclasses are not known to this context.
+	this problem is related to the following location:
+		at public java.util.List com.epam.gems.entity.Gems.list
+		at com.epam.gems.entity.Gems
+

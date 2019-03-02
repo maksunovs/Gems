@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<gems xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.example.com/gems"
+      xsi:schemaLocation="http://www.example.com/gems gemsXSD.xsd">
+    <precious name="ruby">
+        <preciousness>precious</preciousness>
+        <origin>Australia</origin>
+        <visual-parameters>
+            <color>red</color>
+            <transparency>85</transparency>
+            <lustre>vitreous</lustre>
+        </visual-parameters>
+        <value>8.62</value>
+        <hardness>9</hardness>
+    </precious>
+    <precious name="tourmaline">
+        <preciousness>precious</preciousness>
+        <origin>China</origin>
+        <visual-parameters>
+            <color>pink</color>
+            <transparency>50</transparency>
+            <lustre>vitreous</lustre>
+        </visual-parameters>
+        <value>10</value>
+        <hardness>7</hardness>
+    </precious>
+    <precious name="diamond">
+        <preciousness>precious</preciousness>
+        <origin>Africa</origin>
+        <visual-parameters>
+            <color>colorless</color>
+            <transparency>100</transparency>
+            <lustre>adamantine</lustre>
+        </visual-parameters>
+        <value>2</value>
+        <hardness>10</hardness>
+    </precious>
+    <semiprecious name="amethyst">
+        <preciousness>semiprecious</preciousness>
+        <origin>Brazil</origin>
+        <visual-parameters>
+            <color>violet</color>
+            <transparency>70</transparency>
+            <lustre>vitreous</lustre>
+        </visual-parameters>
+        <value>5.2</value>
+        <hardness>7</hardness>
+    </semiprecious>
+    <semiprecious name="garnet">
+        <preciousness>semiprecious</preciousness>
+        <origin>Russia</origin>
+        <visual-parameters>
+            <color>red</color>
+            <transparency>75</transparency>
+            <lustre>vitreous</lustre>
+        </visual-parameters>
+        <value>4.2</value>
+        <hardness>8</hardness>
+    </semiprecious>
+    <semiprecious name="malachite">
+        <preciousness>semiprecious</preciousness>
+        <origin>Kazakhstan</origin>
+        <visual-parameters>
+            <color>green</color>
+            <transparency>0</transparency>
+            <lustre>silky</lustre>
+        </visual-parameters>
+        <value>3.9</value>
+        <hardness>3</hardness>
+    </semiprecious>
+</gems>

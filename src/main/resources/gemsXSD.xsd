@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.example.com/gems"
+        xmlns:tns="http://www.example.com/gems"
+        elementFormDefault="qualified">
+    <element name="gem" type="tns:Gem" abstract="true"/>
+    <element name="precious" type="tns:PreciousStone" substitutionGroup="tns:gem"/>
+    <element name="semiprecious" type="tns:SemipreciousStone" substitutionGroup="tns:gem"/>
+    <element name="gems">
+        <complexType>
+            <sequence>
+                <element name="precious"
+                         type="tns:PreciousStone"
+                         minOccurs="0"
+                         maxOccurs="unbounded"/>
+
+                <element name="semiprecious"
+                         type="tns:SemipreciousStone"
+                         minOccurs="0"
+                         maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+    <complexType name="Gem">
+        <sequence minOccurs="0" maxOccurs="unbounded">
+            <element name="preciousness">
+                <simpleType>
+                    <restriction base="string">
+                        <enumeration value="precious"/>
+                        <enumeration value="semiprecious"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="origin" type="string"/>
+            <element name="visual-parameters" type="tns:VisualParameters"/>
+            <element name="value" type="double"/>
+            <element name="hardness">
+                <simpleType>
+                    <restriction base="double">
+                        <minInclusive value="1"/>
+                        <maxInclusive value="10"/>
+                    </restriction>
+                </simpleType>
+            </element>
+        </sequence>
+        <attribute name="name" type="string"/>
+    </complexType>
+    <complexType name="PreciousStone">
+        <complexContent>
+            <extension base="tns:Gem"/>
+        </complexContent>
+    </complexType>
+    <complexType name="SemipreciousStone">
+        <complexContent>
+            <extension base="tns:Gem"/>
+        </complexContent>
+    </complexType>
+    <complexType name="VisualParameters">
+        <sequence minOccurs="0">
+            <element name="color" type="string"/>
+            <element name="transparency">
+                <simpleType>
+                    <restriction base="int">
+                        <minInclusive value="0"/>
+                        <maxInclusive value="100"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="lustre">
+                <simpleType>
+                    <restriction base="string">
+                        <enumeration value="adamantine"/>
+                        <enumeration value="metallic"/>
+                        <enumeration value="vitreous"/>
+                        <enumeration value="waxy"/>
+                        <enumeration value="silky"/>
+                    </restriction>
+                </simpleType>
+            </element>
+        </sequence>
+    </complexType>
+</schema>
