@@ -116,3 +116,13 @@ Invalid @XmlElementRef : Type "class com.epam.gems.entity.VisualParameters" or a
 		at public java.util.List com.epam.gems.entity.Gems.list
 		at com.epam.gems.entity.Gems
 
+2019-03-02 18:27:27 ERROR JAXBParser:25 - com.sun.xml.internal.bind.v2.runtime.IllegalAnnotationsException: 1 counts of IllegalAnnotationExceptions
+Property preciousness is present but not specified in @XmlType.propOrder
+	this problem is related to the following location:
+		at private java.lang.String com.epam.gems.entity.Gem.preciousness
+		at com.epam.gems.entity.Gem
+		at com.epam.gems.entity.PreciousStone
+		at public java.util.List com.epam.gems.entity.Gems.list
+		at com.epam.gems.entity.Gems
+
+2019-03-03 01:53:57 INFO  SAXValidator:33 - src/test/java/gems.xml is valid

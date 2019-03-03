@@ -47,12 +47,27 @@
     </complexType>
     <complexType name="PreciousStone">
         <complexContent>
-            <extension base="tns:Gem"/>
+            <extension base="tns:Gem">
+                <sequence>
+                    <element name="rarity">
+                        <simpleType>
+                            <restriction base="string">
+                                <enumeration value="rare"/>
+                                <enumeration value="very rare"/>
+                            </restriction>
+                        </simpleType>
+                    </element>
+                </sequence>
+            </extension>
         </complexContent>
     </complexType>
     <complexType name="SemipreciousStone">
         <complexContent>
-            <extension base="tns:Gem"/>
+            <extension base="tns:Gem">
+                <sequence>
+                    <element name="price" type="double"/>
+                </sequence>
+            </extension>
         </complexContent>
     </complexType>
     <complexType name="VisualParameters">

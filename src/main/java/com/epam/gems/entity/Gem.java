@@ -1,37 +1,41 @@
 package com.epam.gems.entity;
 
 
-
 import javax.xml.bind.annotation.*;
+import java.util.Objects;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name="Gem",propOrder = {
+@XmlType(name = "Gem", propOrder = {
         "name",
+        "preciousness",
         "origin",
         "visualParameters",
         "value",
         "hardness"
 })
-@XmlSeeAlso( {PreciousStone.class, SemipreciousStone.class,VisualParameters.class})
+@XmlSeeAlso({PreciousStone.class, SemipreciousStone.class})
 
 public abstract class Gem {
 
-    @XmlAttribute(name="name")
+    @XmlAttribute(name = "name")
     private String name;
-    @XmlElement(namespace="http://www.example.com/gems")
+    @XmlElement(namespace = "http://www.example.com/gems")
+    private String preciousness;
+    @XmlElement(namespace = "http://www.example.com/gems")
     private String origin;
-    @XmlElement(required = true)
+    @XmlElement(name = "visual-parameters", namespace = "http://www.example.com/gems")
     private VisualParameters visualParameters;
-    @XmlElement(namespace="http://www.example.com/gems")
+    @XmlElement(namespace = "http://www.example.com/gems")
     private double value;
-    @XmlElement(namespace="http://www.example.com/gems")
+    @XmlElement(namespace = "http://www.example.com/gems")
     private double hardness;
 
     public Gem() {
     }
 
-    public Gem(String name, String origin, VisualParameters visualParameters, double value, double hardness) {
+    public Gem(String name, String preciousness, String origin, VisualParameters visualParameters, double value, double hardness) {
         this.name = name;
+        this.preciousness = preciousness;
         this.origin = origin;
         this.visualParameters = visualParameters;
         this.value = value;
@@ -78,11 +82,20 @@ public abstract class Gem {
         this.hardness = hardness;
     }
 
+    public String getPreciousness() {
+        return preciousness;
+    }
+
+    public void setPreciousness(String preciousness) {
+        this.preciousness = preciousness;
+    }
+
     @Override
     public String toString() {
         return "Gem{" +
-                "name='" + name + '\'' +
-                ", origin='" + origin + '\'' +
+                "name=" + name +
+                ", preciousness=" + preciousness +
+                ", origin=" + origin +
                 ", visualParameters=" + visualParameters +
                 ", value=" + value +
                 ", hardness=" + hardness +

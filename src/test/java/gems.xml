@@ -12,6 +12,7 @@
         </visual-parameters>
         <value>8.62</value>
         <hardness>9</hardness>
+        <rarity>rare</rarity>
     </precious>
     <precious name="tourmaline">
         <preciousness>precious</preciousness>
@@ -23,6 +24,7 @@
         </visual-parameters>
         <value>10</value>
         <hardness>7</hardness>
+        <rarity>rare</rarity>
     </precious>
     <precious name="diamond">
         <preciousness>precious</preciousness>
@@ -34,6 +36,7 @@
         </visual-parameters>
         <value>2</value>
         <hardness>10</hardness>
+        <rarity>very rare</rarity>
     </precious>
     <semiprecious name="amethyst">
         <preciousness>semiprecious</preciousness>
@@ -45,6 +48,7 @@
         </visual-parameters>
         <value>5.2</value>
         <hardness>7</hardness>
+        <price>300</price>
     </semiprecious>
     <semiprecious name="garnet">
         <preciousness>semiprecious</preciousness>
@@ -56,6 +60,7 @@
         </visual-parameters>
         <value>4.2</value>
         <hardness>8</hardness>
+        <price>600</price>
     </semiprecious>
     <semiprecious name="malachite">
         <preciousness>semiprecious</preciousness>
@@ -67,5 +72,6 @@
         </visual-parameters>
         <value>3.9</value>
         <hardness>3</hardness>
+        <price>250</price>
     </semiprecious>
 </gems>
