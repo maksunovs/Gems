@@ -3,23 +3,22 @@ package com.epam.gems.parser;
 import com.epam.gems.entity.Gem;
 import com.epam.gems.entity.PreciousStone;
 import com.epam.gems.entity.SemipreciousStone;
+import com.epam.gems.entity.VisualParameters;
 import org.apache.log4j.Logger;
 import org.xml.sax.Attributes;
 import org.xml.sax.helpers.DefaultHandler;
 
-import java.util.EnumSet;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class GemsHandler extends DefaultHandler {
     private static final Logger LOGGER = Logger.getLogger(GemsHandler.class);
-    private Set<Gem> gems;
+    private List<Gem> gems;
     private Gem current = null;
     private GemEnum currentEnum = null;
     private EnumSet<GemEnum> withText;
 
     public GemsHandler() {
-        gems = new HashSet<>();
+        gems = new ArrayList<>();
         withText = EnumSet.of(GemEnum.PRECIOUSNESS,
                 GemEnum.ORIGIN,
                 GemEnum.COLOR,
@@ -31,12 +30,13 @@ public class GemsHandler extends DefaultHandler {
                 GemEnum.RARITY);
     }
 
-    public Set<Gem> getGems() {
+    public List<Gem> getGems() {
         return gems;
     }
 
     @Override
     public void startElement(String uri, String localName, String qName, Attributes attributes) {
+        if (localName.equals("gems")) return;
         if (localName.equals("precious")) {
             current = new PreciousStone();
             current.setName(attributes.getValue(0));
@@ -44,7 +44,14 @@ public class GemsHandler extends DefaultHandler {
             current = new SemipreciousStone();
             current.setName(attributes.getValue(0));
         } else {
-            GemEnum temp = GemEnum.valueOf(localName.toUpperCase());
+            GemEnum temp = null;
+            EnumSet<GemEnum> all = EnumSet.allOf(GemEnum.class);
+            for (GemEnum element : all) {
+                if (element.getValue().equals(localName)) {
+                    temp = element;
+                    break;
+                }
+            }
             if (withText.contains(temp)) {
                 currentEnum = temp;
             }
@@ -59,7 +66,7 @@ public class GemsHandler extends DefaultHandler {
         }
     }
 
-
+    @Override
     public void characters(char[] ch, int start, int length) {
         String data = new String(ch, start, length).trim();
         if (currentEnum != null) {

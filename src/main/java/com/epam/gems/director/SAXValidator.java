@@ -1,4 +1,4 @@
-package com.epam.gems.control;
+package com.epam.gems.director;
 
 
 import org.apache.log4j.Logger;
@@ -14,7 +14,7 @@ import java.io.IOException;
 
 
 public class SAXValidator {
-    private final String xsdPath;
+    private String xsdPath;
     private static final Logger LOGGER = Logger.getLogger(SAXValidator.class);
 
     public SAXValidator(String xsdPath) {
@@ -22,7 +22,6 @@ public class SAXValidator {
     }
 
     public boolean validate(String xmlPath) {
-        getClass().getClassLoader().getResourceAsStream(xsdPath);
         SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
         boolean flag = false;
         try {
@@ -37,7 +36,11 @@ public class SAXValidator {
         } catch (IOException err) {
             LOGGER.error(xmlPath + " is not valid because " + err.getMessage());
         }
+
         return flag;
+    }
+    public void setSchema(String xsdPath){
+        this.xsdPath=xsdPath;
     }
 
 }

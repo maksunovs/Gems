@@ -1,4 +1,4 @@
-package com.epam.gems.control;
+package com.epam.gems.director;
 
 import org.junit.Assert;
 import org.junit.Test;

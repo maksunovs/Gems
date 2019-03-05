@@ -11,11 +11,9 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 import java.io.File;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class JAXBParser implements Parser {
-    private static final Logger LOGGER = Logger.getLogger(JAXBParser.class);
+public class GemJAXBParser implements Parser {
 
     @Override
     public List<Gem> parse(String path) throws JAXBParserException {
@@ -25,7 +23,6 @@ public class JAXBParser implements Parser {
             Unmarshaller u = jc.createUnmarshaller();
             gems = (Gems) u.unmarshal(new File(path));
         } catch (JAXBException err) {
-            LOGGER.error(err);
             throw new JAXBParserException(err.getMessage());
         }
         return gems.getList();

@@ -31,6 +31,7 @@ public abstract class Gem {
     private double hardness;
 
     public Gem() {
+        visualParameters = new VisualParameters();
     }
 
     public Gem(String name, String preciousness, String origin, VisualParameters visualParameters, double value, double hardness) {

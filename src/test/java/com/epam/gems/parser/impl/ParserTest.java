@@ -4,21 +4,24 @@ import com.epam.gems.entity.Gem;
 import com.epam.gems.entity.PreciousStone;
 import com.epam.gems.entity.SemipreciousStone;
 import com.epam.gems.entity.VisualParameters;
+import com.epam.gems.exceptions.DOMParserException;
 import com.epam.gems.exceptions.JAXBParserException;
+import com.epam.gems.exceptions.SAXParserException;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 
 public class ParserTest {
-    private static final JAXBParser PARSER = new JAXBParser();
+    private static final GemJAXBParser JAXB_PARSER = new GemJAXBParser();
+    private static final GemSAXParser SAX_PARSER = new GemSAXParser();
+    private static final GemDOMParser DOM_PARSER = new GemDOMParser();
     private static final String XML_PATH = "src/test/java/gems.xml";
     private static List<Gem> expected;
-
+    //в случае ошибки добавить в VM options --add-modules java.se.ee
     @BeforeClass
     public static void initializeExpectedList() {
         expected = Arrays.asList(new PreciousStone("ruby", "precious", "Australia", new VisualParameters("red", 85, "vitreous"), 8.62, 9, "rare"),
@@ -31,17 +34,19 @@ public class ParserTest {
 
     @Test
     public void JAXBParserShouldCreateListOfGemsFromXML() throws JAXBParserException {
-        List<Gem> actual = PARSER.parse(XML_PATH);
-        Assert.assertEquals(actual.get(0), expected.get(0));
+        List<Gem> actual = JAXB_PARSER.parse(XML_PATH);
+        Assert.assertEquals(expected,actual);
     }
 
     @Test
-    public void SAXParserShouldCreateListOfGemsFromXML() {
-
+    public void SAXParserShouldCreateListOfGemsFromXML() throws SAXParserException {
+        List<Gem> actual = SAX_PARSER.parse(XML_PATH);
+        Assert.assertEquals(expected,actual);
     }
 
     @Test
-    public void DOMParserShouldCreateListOfGemsFromXML() {
-
+    public void DOMParserShouldCreateListOfGemsFromXML() throws DOMParserException {
+        List<Gem> actual = DOM_PARSER.parse(XML_PATH);
+        Assert.assertEquals(expected,actual);
     }
 }
