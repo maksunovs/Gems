@@ -4,17 +4,12 @@ import com.epam.gems.entity.Gem;
 import com.epam.gems.entity.PreciousStone;
 import com.epam.gems.entity.SemipreciousStone;
 import com.epam.gems.entity.VisualParameters;
-import com.epam.gems.exceptions.InvalidXMLDocumentException;
 import com.epam.gems.exceptions.ParserException;
 import com.epam.gems.parser.Parser;
-import com.epam.gems.parser.impl.GemDOMParser;
-import com.epam.gems.parser.impl.GemJAXBParser;
-import com.epam.gems.parser.impl.GemSAXParser;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import java.text.ParseException;
 import java.util.Arrays;
 import java.util.List;
 

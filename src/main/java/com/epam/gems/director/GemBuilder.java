@@ -21,19 +21,20 @@ public class GemBuilder {
 
     public List<Gem> buildGemsFrom(String xmlPath) throws InvalidXMLDocumentException {
         List<Gem> result = new ArrayList<>();
-
-        if (validator.validate(xmlPath)) {
-            try {
+        try {
+            if (validator.validate(xmlPath)) {
                 result = parser.parse(xmlPath);
-            } catch (ParserException err) {
-                LOGGER.error(err.getMessage());
+
+            } else {
+                throw new InvalidXMLDocumentException("XML document is invalid");
             }
-        } else {
-            throw new InvalidXMLDocumentException("XML document is invalid");
+        } catch (ParserException err) {
+            LOGGER.error(err.getMessage());
         }
         return result;
     }
-    public void setParser(Parser parser){
-        this.parser=parser;
+
+    public void setParser(Parser parser) {
+        this.parser = parser;
     }
 }

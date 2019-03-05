@@ -1,6 +1,7 @@
 package com.epam.gems.director;
 
 
+import com.epam.gems.exceptions.ValidationErrorException;
 import org.apache.log4j.Logger;
 import org.xml.sax.SAXException;
 
@@ -21,7 +22,7 @@ public class SAXValidator {
         this.xsdPath = xsdPath;
     }
 
-    public boolean validate(String xmlPath) {
+    public boolean validate(String xmlPath) throws ValidationErrorException {
         SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
         boolean flag = false;
         try {
@@ -32,9 +33,9 @@ public class SAXValidator {
             LOGGER.info(xmlPath + " is valid");
             flag = true;
         } catch (SAXException err) {
-            LOGGER.error("validate " + xmlPath + " is not valid because " + err.getMessage());
+            throw  new ValidationErrorException("validate " + xmlPath + " is not valid because " + err.getMessage());
         } catch (IOException err) {
-            LOGGER.error(xmlPath + " is not valid because " + err.getMessage());
+            throw  new ValidationErrorException(xmlPath + " is not valid because " + err.getMessage());
         }
 
         return flag;

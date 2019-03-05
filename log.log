@@ -126,3 +126,4 @@ Property preciousness is present but not specified in @XmlType.propOrder
 		at com.epam.gems.entity.Gems
 
 2019-03-03 01:53:57 INFO  SAXValidator:33 - src/test/java/gems.xml is valid
+2019-03-05 14:04:53 INFO  SAXValidator:33 - src/test/java/gems.xml is valid
